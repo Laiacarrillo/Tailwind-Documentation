@@ -1,0 +1,63 @@
+HTTrack3.49-2+htsswf+htsjava launched on Tue, 21 Jan 2025 19:23:39 at http://tailwindcss.com/docs +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" http://tailwindcss.com/docs -O1 "C:\My Web Sites\Tailwind Documentation" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+19:25:49	Error: 	Unable to save file C:/My Web Sites/Tailwind Documentation/tailwindcss.com/showcase: Permission denied
+19:29:02	Error: 	Unable to save file C:/My Web Sites/Tailwind Documentation/tailwindcss.com/brand: Permission denied
+19:29:08	Error: 	"Not Found" (404) at link https://tailwindcss.com/%22data:image/svg+xml,%3Csvg%20xmlns='http:/www.w3.org/2000/svg'%20viewBox='0%200%2064%206'%3E%3Crect%20x='32'%20width='1'%20height='1'%20fill='%23cbd5e1'/%3E%3Crect%20width='1'%20height='6'%20fill='%23f1f5f9'/%3E%3C/svg%3E%22 (from https://tailwindcss.com/)
+19:29:08	Error: 	"Not Found" (404) at link https://tailwindcss.com/%22data:image/svg+xml,%3Csvg%20xmlns='http:/www.w3.org/2000/svg'%20viewBox='0%200%2064%206'%3E%3Crect%20x='32'%20width='1'%20height='1'%20fill='%23f1f5f9'/%3E%3Crect%20width='1'%20height='6'%20fill='%23f1f5f9'/%3E%3C/svg%3E%22 (from https://tailwindcss.com/)
+19:29:09	Error: 	"Not Found" (404) at link https://tailwindcss.com/img/hero-pattern.svg (from https://tailwindcss.com/_next/static/css/ca40c9b7c97ebdb6.css)
+19:29:09	Error: 	"Not Found" (404) at link https://tailwindcss.com/what_a_rush.png (from https://tailwindcss.com/_next/static/css/ca40c9b7c97ebdb6.css)
+19:29:11	Error: 	Unable to save file C:/My Web Sites/Tailwind Documentation/tailwindcss.com/blog/headless-ui-v2: Permission denied
+19:32:10	Warning: 	Link https://github.com/tailwindlabs/tailwindcss/blob/main/stubs/config.full.js not scanned (follow robots meta tag)
+19:32:11	Error: 	"Not Found" (404) at link https://tailwindcss.com/docs/ring-color#changing-the-opacity (from https://tailwindcss.com/docs/ring-width)
+19:32:44	Warning: 	Link https://github.com/tailwindlabs/tailwindcss/blob/c4e443acc093d8980bf476f14255b793c5065b9a/src/lib/defaultExtractor.js not scanned (follow robots meta tag)
+19:32:49	Warning: 	Link https://github.com/tailwindlabs/blog.tailwindcss.com/blob/59bd38f2f423f133c0b6157a925ec2875ce880af/next.config.js not scanned (follow robots meta tag)
+19:32:56	Error: 	"Not Found" (404) at link https://tailwindcss.com/docs/guides/resources/css/app.css (from https://tailwindcss.com/docs/guides/laravel)
+19:32:56	Error: 	"Not Found" (404) at link https://tailwindcss.com/docs/guides/css/app.css (from https://tailwindcss.com/docs/guides/laravel)
+19:32:56	Error: 	"Not Found" (404) at link https://tailwindcss.com/docs/guides/npx parcel src/index.html (from https://tailwindcss.com/docs/guides/parcel)
+19:33:38	Warning: 	file not stored in cache due to bogus state (incomplete type with Not Acceptable (200), size 0): https://github.com/signup_check/username?suggest_usernames=true
+19:33:39	Warning: 	Link https://github.com/tailwindlabs/tailwindcss/blob/7bf11f90879dc8ee26ae2aa4c565d0c4508b756a/packages/tailwindcss/theme.css not scanned (follow robots meta tag)
+19:33:40	Warning: 	Link https://github.com/tailwindlabs/tailwindcss/blob/2cbc915193a79a7865aa63488ec742cf17d53545/packages/tailwindcss/theme.css not scanned (follow robots meta tag)
+19:33:40	Warning: 	Link https://github.com/tailwindlabs/tailwindcss/blob/aa15964b28ab9858ac0055082741c2f95f20a920/packages/tailwindcss/theme.css not scanned (follow robots meta tag)
+19:33:40	Warning: 	Link https://github.com/tailwindlabs/tailwindcss/blob/4f63a5a9e0acfe2dea4fc7ed1a914b0103f15446/packages/tailwindcss/theme.css not scanned (follow robots meta tag)
+19:33:40	Error: 	"Not Found" (404) at link https://github.com/tailwindlabs/tailwindcss/commits/next/packages/tailwindcss/"https://github.com/user-attachments/assets/dade9244-6e22-4822-ac5c-ffa33e895f6e"></kbd> (from https://github.com/tailwindlabs/tailwindcss/commits/next/packages/tailwindcss/theme.css)
+19:33:40	Warning: 	Link https://github.com/tailwindlabs/tailwindcss/blob/3244da898144d838bba97121c15d83cb3dfe76b7/packages/tailwindcss/theme.css not scanned (follow robots meta tag)
+19:33:40	Warning: 	Link https://github.com/tailwindlabs/tailwindcss/blob/4f769806516485f9ec3fab0246dbfb266b8fb6a6/packages/tailwindcss/theme.css not scanned (follow robots meta tag)
+19:33:41	Warning: 	Link https://github.com/tailwindlabs/tailwindcss/blob/e1c74ca9355c1f03f28f0f65bb1e76bb88902326/packages/tailwindcss/theme.css not scanned (follow robots meta tag)
+19:33:41	Warning: 	Link https://github.com/tailwindlabs/tailwindcss/blob/1dbd99d37301832f5430821cd8b65e001d77ed0b/packages/tailwindcss/theme.css not scanned (follow robots meta tag)
+19:33:41	Warning: 	Link https://github.com/tailwindlabs/tailwindcss/blob/350add7490a4ad5666de08bcfda723b3bb49e050/packages/tailwindcss/theme.css not scanned (follow robots meta tag)
+19:33:41	Warning: 	Link https://github.com/tailwindlabs/tailwindcss/blob/586723fd6ad7d7d04ff27388f4418b30b5a674b1/packages/tailwindcss/theme.css not scanned (follow robots meta tag)
+19:33:41	Warning: 	Link https://github.com/tailwindlabs/tailwindcss/blob/28e46badf7c610a2b1f7f2180464ad212b78131e/packages/tailwindcss/theme.css not scanned (follow robots meta tag)
+19:33:42	Warning: 	Link https://github.com/tailwindlabs/tailwindcss/blob/26638af3ef9ff98791f0196c340ccf59e8d1fba4/packages/tailwindcss/theme.css not scanned (follow robots meta tag)
+19:33:42	Warning: 	Link https://github.com/tailwindlabs/tailwindcss/blob/32cf4af2a4f131438289984f26c38fa150b48226/packages/tailwindcss/theme.css not scanned (follow robots meta tag)
+19:33:42	Warning: 	Link https://github.com/tailwindlabs/tailwindcss/blob/2aea6e9d376e308ccd241874951b4f4fa0cf5b20/packages/tailwindcss/theme.css not scanned (follow robots meta tag)
+19:33:42	Warning: 	Link https://github.com/tailwindlabs/tailwindcss/blob/8bd3c85420e9d1b366dbf4c6ae09ba542ab1a118/packages/tailwindcss/theme.css not scanned (follow robots meta tag)
+19:33:43	Warning: 	Link https://github.com/tailwindlabs/tailwindcss/blob/c50de9384a1fd48a1b8de5a32b706bbe01a8fa4d/packages/tailwindcss/theme.css not scanned (follow robots meta tag)
+19:33:43	Warning: 	Link https://github.com/tailwindlabs/tailwindcss/blob/b63f493768c7a3d2220c195a14f0dbc9878643a8/packages/tailwindcss/theme.css not scanned (follow robots meta tag)
+19:33:43	Warning: 	Link https://github.com/tailwindlabs/tailwindcss/blob/ca4e4aebd8cc896ccd3f55f43b3fa68af9ad1baf/packages/tailwindcss/theme.css not scanned (follow robots meta tag)
+19:33:43	Warning: 	Link https://github.com/tailwindlabs/tailwindcss/blob/63b321b7eadb12abf098f3f2ba1e25993a58fd72/packages/tailwindcss/theme.css not scanned (follow robots meta tag)
+19:33:44	Error: 	"Not Found" (404) at link https://github.com/tailwindlabs/tailwindcss/commits/next/packages/tailwindcss/"https://github.com/user-attachments/assets/2272e494-500b-4f75-b5c1-d41c714f0339"> (from https://github.com/tailwindlabs/tailwindcss/commits/next/packages/tailwindcss/theme.css)
+19:33:44	Warning: 	Link https://github.com/tailwindlabs/tailwindcss/blob/1c5bb39d60e7471d60c0e4ab5545c7bc839a6903/packages/tailwindcss/theme.css not scanned (follow robots meta tag)
+19:33:44	Error: 	"Not Found" (404) at link https://github.com/tailwindlabs/tailwindcss/commits/next/packages/tailwindcss/"https://github.com/user-attachments/assets/2de1bfca-fddd-47f9-b609-39f26abdee41"> (from https://github.com/tailwindlabs/tailwindcss/commits/next/packages/tailwindcss/theme.css)
+19:33:44	Warning: 	Link https://github.com/tailwindlabs/tailwindcss/blob/2d45f5aa9a73f6455d654e96ec97832167b65948/packages/tailwindcss/theme.css not scanned (follow robots meta tag)
+19:33:44	Warning: 	Link https://github.com/tailwindlabs/tailwindcss/blob/d6a67beb7660a1eb159f81654cae7a2b87f91b97/packages/tailwindcss/theme.css not scanned (follow robots meta tag)
+19:33:44	Warning: 	Link https://github.com/tailwindlabs/tailwindcss/blob/f7686e19822de2540d203f90c0cfcc5617d58c69/packages/tailwindcss/theme.css not scanned (follow robots meta tag)
+19:33:45	Warning: 	Link https://github.com/tailwindlabs/tailwindcss/blob/5f2d65492880843932a2e292f57062d799876540/packages/tailwindcss/theme.css not scanned (follow robots meta tag)
+19:33:45	Warning: 	Link https://github.com/tailwindlabs/tailwindcss/blob/7347cddb9ab17786e892e4e8744d2358ac05363f/packages/tailwindcss/theme.css not scanned (follow robots meta tag)
+19:33:45	Warning: 	Link https://github.com/tailwindlabs/tailwindcss/blob/dadb096da21c63946ccb694d649835438cf16614/packages/tailwindcss/theme.css not scanned (follow robots meta tag)
+19:33:45	Warning: 	Link https://github.com/tailwindlabs/tailwindcss/blob/91fca13981c4647dfdd9d06495ae5f3ac461dcb8/packages/tailwindcss/theme.css not scanned (follow robots meta tag)
+19:33:45	Warning: 	Link https://github.com/tailwindlabs/tailwindcss/blob/8309b4726641a256517c00ed7cfa4497f636746a/packages/tailwindcss/theme.css not scanned (follow robots meta tag)
+19:33:46	Warning: 	Link https://github.com/tailwindlabs/tailwindcss/blob/a68de1df277f14087e6c6f93d27709c12df4bb3d/packages/tailwindcss/theme.css not scanned (follow robots meta tag)
+19:33:49	Error: 	"Not Found" (404) at link https://github.com/email_validity_checks (from https://github.com/signup?return_to=https%3A%2F%2Fgithub.com%2Ftailwindlabs%2Ftailwindcss%2Fblob%2Fnext%2Fpackages%2Ftailwindcss%2Ftheme.css&source=login)
+19:33:49	Error: 	"Not Found" (404) at link https://github.com/password_validity_checks?hide_password_validity_pills=true&hide_strength_sentence=true (from https://github.com/signup?return_to=https%3A%2F%2Fgithub.com%2Ftailwindlabs%2Ftailwindcss%2Fblob%2Fnext%2Fpackages%2Ftailwindcss%2Ftheme.css&source=login)
+19:33:50	Warning: 	Note: due to https://github.githubassets.com remote robots.txt rules, links beginning with these path will be forbidden: /*/pulse, /*/tree/, /gist/, /*/forks, /*/stars, /*/download, /*/revisions, /*/issues/new, /*/issues/search, /*/commits/, /*/commits/*?author, /*/commits/*?path, /*/branches, /*/tags, /*/contributors, /*/comments, /*/stargazers, /*/archive/, /*/blame/, /*/watchers, /*/network, /*/graphs, /*/raw/, /*/compare/, /*/cache/, /.git/, */.git/, /*.git$, /search/advanced, /search, */search, /*q=, /*.atom$, /ekansa/Open-Context-Data, /ekansa/opencontext-*, */tarball/, */zipball/, /*source=*, /*ref_cta=*, /*plan=*, /*return_to=*, /*ref_loc=*, /*setup_organization=*, /*source_repo=*, /*ref_page=*, /*source=*, /*referrer=*, /*report=*, /*author=*, /*since=*, /*until=*, /*commits?author=*, /*report-abuse?report=*, /*tab=*, /account-login, /Explodingstuff/ (see in the options to disable this)
+19:33:50	Error: 	"The requested content does not exist." (404) at link https://github.githubassets.com/assets/Mona-Sans.woff2 (from https://github.githubassets.com/assets/signup-7e92607742d4.css)
+19:33:50	Error: 	"The requested content does not exist." (404) at link https://github.githubassets.com/assets/Hubot-Sans.woff2 (from https://github.githubassets.com/assets/signup-7e92607742d4.css)
+
+HTTrack Website Copier/3.49-2 mirror complete in 10 minutes 11 seconds : 1926 links scanned, 1908 files written (331231617 bytes overall) [271015478 bytes received at 443560 bytes/sec], 75243154 bytes transferred using HTTP compression in 893 files, ratio 16%, 21.7 requests per connection
+(18 errors, 34 warnings, 0 messages)
