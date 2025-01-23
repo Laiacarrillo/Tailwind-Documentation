@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego de Damas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .board {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      width: 400px;
+      height: 400px;
+    }
+    .square {
+      width: 50px;
+      height: 50px;
+      position: relative;
+    }
+    .black {
+      background-color: #4a5568;
+    }
+    .white {
+      background-color: #f7fafc;
+    }
+    .piece {
+      border-radius: 50%;
+      width: 80%;
+      height: 80%;
+      margin: 10%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      cursor: pointer;
+    }
+    .red-piece {
+      background-color: #f56565;
+    }
+    .blue-piece {
+      background-color: #4299e1;
+    }
+    .highlight {
+      outline: 2px solid yellow;
+    }
+  </style>
+</head>
+<body class="flex flex-col justify-center items-center min-h-screen bg-gray-200">
+  <h1 class="text-center text-2xl font-bold mb-4">Juego de Damas</h1>
+  <div class="mb-4">
+    <span class="text-lg font-semibold text-red-600">Fichas Rojas: </span>
+    <span id="red-score" class="text-lg font-bold">12</span>
+    <span class="mx-4">|</span>
+    <span class="text-lg font-semibold text-blue-600">Fichas Azules: </span>
+    <span id="blue-score" class="text-lg font-bold">12</span>
+  </div>
+  <div id="board" class="board"></div>
+
+  <script>
+    const board = document.getElementById('board');
+    const redScoreElement = document.getElementById('red-score');
+    const blueScoreElement = document.getElementById('blue-score');
+
+    let selectedPiece = null;
+    let redScore = 12;
+    let blueScore = 12;
+    let currentPlayer = 'red'; // Red starts first
+
+    const updateScores = () => {
+      redScoreElement.textContent = redScore;
+      blueScoreElement.textContent = blueScore;
+    };
+
+    const createBoard = () => {
+      for (let row = 0; row < 8; row++) {
+        for (let col = 0; col < 8; col++) {
+          const square = document.createElement('div');
+          square.classList.add('square');
+          square.classList.add((row + col) % 2 === 0 ? 'white' : 'black');
+          square.dataset.row = row;
+          square.dataset.col = col;
+
+          if ((row + col) % 2 !== 0 && row < 3) {
+            const piece = document.createElement('div');
+            piece.classList.add('piece', 'red-piece');
+            piece.dataset.color = 'red';
+            piece.dataset.row = row;
+            piece.dataset.col = col;
+            square.appendChild(piece);
+          } else if ((row + col) % 2 !== 0 && row > 4) {
+            const piece = document.createElement('div');
+            piece.classList.add('piece', 'blue-piece');
+            piece.dataset.color = 'blue';
+            piece.dataset.row = row;
+            piece.dataset.col = col;
+            square.appendChild(piece);
+          }
+
+          board.appendChild(square);
+        }
+      }
+    };
+
+    const clearHighlights = () => {
+      document.querySelectorAll('.square').forEach(square => {
+        square.classList.remove('highlight');
+      });
+    };
+
+    const getValidMoves = (piece) => {
+      const row = parseInt(piece.dataset.row);
+      const col = parseInt(piece.dataset.col);
+      const color = piece.dataset.color;
+      const direction = color === 'red' ? 1 : -1; // Red moves down, blue moves up
+      const moves = [];
+
+      const addMoveIfValid = (r, c, jump = false) => {
+        const targetSquare = document.querySelector(`.square[data-row='${r}'][data-col='${c}']`);
+        if (targetSquare && !targetSquare.querySelector('.piece')) {
+          if (jump) targetSquare.dataset.jump = true; // Mark jump move
+          moves.push(targetSquare);
+        }
+      };
+
+      // Regular moves
+      addMoveIfValid(row + direction, col - 1);
+      addMoveIfValid(row + direction, col + 1);
+
+      // Jump moves (capture)
+      [[direction, -1], [direction, 1]].forEach(([dRow, dCol]) => {
+        const middleRow = row + dRow;
+        const middleCol = col + dCol;
+        const middleSquare = document.querySelector(`.square[data-row='${middleRow}'][data-col='${middleCol}']`);
+
+        if (middleSquare) {
+          const middlePiece = middleSquare.querySelector('.piece');
+          if (middlePiece && middlePiece.dataset.color !== color) {
+            const jumpRow = row + dRow * 2;
+            const jumpCol = col + dCol * 2;
+            addMoveIfValid(jumpRow, jumpCol, true);
+          }
+        }
+      });
+
+      return moves;
+    };
+
+    const highlightMoves = (moves) => {
+      moves.forEach(square => square.classList.add('highlight'));
+    };
+
+    board.addEventListener('click', (e) => {
+      const target = e.target;
+
+      if (target.classList.contains('piece') && target.dataset.color === currentPlayer) {
+        clearHighlights();
+        if (selectedPiece === target) {
+          selectedPiece = null; // Deselect if the same piece is clicked again
+        } else {
+          selectedPiece = target;
+          const validMoves = getValidMoves(selectedPiece);
+          highlightMoves(validMoves);
+        }
+      } else if (target.classList.contains('square') && target.classList.contains('highlight')) {
+        if (selectedPiece) {
+          const oldRow = selectedPiece.dataset.row;
+          const oldCol = selectedPiece.dataset.col;
+          const newRow = target.dataset.row;
+          const newCol = target.dataset.col;
+
+          // Check if it's a jump move
+          if (target.dataset.jump) {
+            const capturedRow = (parseInt(oldRow) + parseInt(newRow)) / 2;
+            const capturedCol = (parseInt(oldCol) + parseInt(newCol)) / 2;
+            const capturedSquare = document.querySelector(`.square[data-row='${capturedRow}'][data-col='${capturedCol}']`);
+            const capturedPiece = capturedSquare.querySelector('.piece');
+            if (capturedPiece) {
+              if (capturedPiece.dataset.color === 'red') {
+                redScore--;
+              } else {
+                blueScore--;
+              }
+              capturedSquare.removeChild(capturedPiece);
+              updateScores();
+            }
+          }
+
+          // Update piece position
+          selectedPiece.dataset.row = newRow;
+          selectedPiece.dataset.col = newCol;
+          target.appendChild(selectedPiece);
+
+          // Switch turn
+          currentPlayer = currentPlayer === 'red' ? 'blue' : 'red';
+
+          // Clear highlights and deselect
+          clearHighlights();
+          selectedPiece = null;
+        }
+      }
+    });
+
+    createBoard();
+  </script>
+</body>
+</html>
